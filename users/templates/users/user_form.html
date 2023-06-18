@@ -1,0 +1,7 @@
+<h1>{% if user %}Update User{% else %}Create User{% endif %}</h1>
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Save</button>
+</form>
